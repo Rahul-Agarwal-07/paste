@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+#root
+{
+   display: flex;
+   flex-direction: column;
+   --dark : #242e38;
+   --normal : #88BDF2;
+   --semi-light : #BDDDFC;
+   --very-light : #6A89A7;
+}
+
+body
+{
+   @apply font-sans;
+}
+
+html,body, #root{
+   height: 100%;
+   margin: 0;
+   padding: 0;
+   background-color: rgb(8, 21, 32);
+}

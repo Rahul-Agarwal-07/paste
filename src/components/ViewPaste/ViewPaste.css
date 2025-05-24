@@ -1,0 +1,36 @@
+.view-paste-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    max-height: none;
+    padding: 2rem;
+}
+
+.paste-container
+{
+    width: 80%;
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 2rem;
+    padding: 1.5rem;
+    background-color: var(--dark);
+    border-radius: 1rem;
+}
+
+.title-container
+{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--normal);
+}
+
+.content-container
+{
+    font-size: 1.2rem;
+    color: white;
+}
