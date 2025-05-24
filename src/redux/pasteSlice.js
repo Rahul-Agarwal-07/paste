@@ -37,14 +37,7 @@ export const pasteSlice = createSlice({
       console.log("Inside addToPaste Reducer");
 
       const paste = action.payload;
-      const isValid = paste.title.trim() != "" && paste.content.trim() != "";
-
-      if(!isValid) 
-      {
-        toast.warn("Title or Content is Empty!");
-        return;
-      }
-
+     
       state.paste.unshift(paste);
       localStorage.setItem("paste",JSON.stringify(state.paste));
 
@@ -55,14 +48,6 @@ export const pasteSlice = createSlice({
     {
       const paste = action.payload;
       const index = state.paste.findIndex((item) => item.id === paste.id);
-
-      const isValid = paste.title.trim() != "" && paste.content.trim() != "";
-
-      if(!isValid) 
-      {
-        toast.warn("Title or Content is Empty!");
-        return;
-      }
 
       if(index >= 0)
       {

@@ -51,8 +51,14 @@ const HomePage = () => {
       })
     }
 
-    dispatch(addToPaste(paste));
-    clearUpPage();
+    if(isValidPaste(paste))
+    {
+      dispatch(addToPaste(paste));
+      clearUpPage();
+    }
+
+    else toast.warn("Title or content is Empty!");
+    
   }
 
   function updatePaste(event)
@@ -66,9 +72,14 @@ const HomePage = () => {
         day : '2-digit'
       })}
 
-    dispatch(updateToPaste(paste));
-    clearUpPage();
-    setEditMode(false);
+    if(isValidPaste(paste))
+    {
+      dispatch(updateToPaste(paste));
+      clearUpPage();
+      setEditMode(false);
+    }
+
+    else toast.warn("Title or content is Empty!");
   }
   
   function clearUpPage()
@@ -76,6 +87,12 @@ const HomePage = () => {
     setTitle("");
     setValue("");
     setParams({});
+  }
+
+  function isValidPaste(paste)
+  {
+    const isValid = paste.title.trim() != "" && paste.content.trim() != "";
+    return isValid;
   }
 
   if(!hasChecked) return null;
