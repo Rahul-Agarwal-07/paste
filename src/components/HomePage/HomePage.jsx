@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux'
+import {toast} from "react-toastify"
 import "./HomePage.css"
 import PageWrapper from '../../PageWrapper';
 import { addToPaste, updateToPaste } from '../../redux/pasteSlice';
@@ -58,7 +59,7 @@ const HomePage = () => {
     }
 
     else toast.warn("Title or content is Empty!");
-    
+
   }
 
   function updatePaste(event)
