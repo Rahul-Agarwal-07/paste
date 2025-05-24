@@ -56,6 +56,14 @@ export const pasteSlice = createSlice({
       const paste = action.payload;
       const index = state.paste.findIndex((item) => item.id === paste.id);
 
+      const isValid = paste.title.trim() != "" && paste.content.trim() != "";
+
+      if(!isValid) 
+      {
+        toast.warn("Title or Content is Empty!");
+        return;
+      }
+
       if(index >= 0)
       {
         console.log("Inside Update Reducer");
