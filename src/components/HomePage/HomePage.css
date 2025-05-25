@@ -45,6 +45,11 @@
 
 .title-box:focus
 {
+    outline: 2px solid var(--normal);
+}
+
+.title-box::before
+{
     content: "";
     position: absolute;
     top: 0;
@@ -57,7 +62,6 @@
     z-index: 1;
     pointer-events: none;
     border-radius: 1rem;
-    outline: 2px solid var(--normal);
 }
 
 .submit-btn-mobile, .submit-btn-desktop
