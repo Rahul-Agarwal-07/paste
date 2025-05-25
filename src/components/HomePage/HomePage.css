@@ -48,22 +48,6 @@
     outline: 2px solid var(--normal);
 }
 
-.title-box::before
-{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -75%;
-    width: 50%;
-    height: 7vh;
-    background: linear-gradient(120deg,transparent,rgb(255,255,255,0.6),transparent);
-    transform: skewX(-20deg);
-    animation: shimmer 1.5s infinite;
-    z-index: 1;
-    pointer-events: none;
-    border-radius: 1rem;
-}
-
 .submit-btn-mobile, .submit-btn-desktop
 {
     display: none;
@@ -236,17 +220,5 @@
         background-color: black;
         border: 2px solid var(--normal);
         color: var(--normal);
-    }
-}
-
-@keyframes shimmer {
-    0%
-    {
-        left: -75%;
-    }
-
-    100%
-    {
-        left: 125%;
     }
 }
