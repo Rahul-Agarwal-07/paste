@@ -190,7 +190,17 @@
         font-size: 1.3rem;
     }
 
+    .slide-in
+    {
+        display: flex;
+        animation: slideFromLeft 1s forwards;
+    }
 
+    .slide-out
+    {
+        display: flex;
+        animation: slideBack 1s forwards;
+    }
 }
 
 @keyframes slideFromLeft {

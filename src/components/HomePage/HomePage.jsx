@@ -59,7 +59,6 @@ const HomePage = () => {
     }
 
     else toast.warn("Title or content is Empty!");
-
   }
 
   function updatePaste(event)
