@@ -72,7 +72,7 @@ const PastesPage = () => {
        
        <div className="pastes-list-container">
         { 
-          (filteredData.length === 0 ) ? (<div className='flex items-center justify-center h-[60vh] text-white text-4xl font-semibold p-1.5'>No Pastes Found</div>) : (filteredData.map(
+          (filteredData.length === 0 ) ? (<div className='flex items-center justify-center h-[60vh] text-white text-4xl font-semibold p-6'>No Pastes Found</div>) : (filteredData.map(
             (paste) => (
             
                 <div className="paste-card" key={paste.id} onClick={(e) => handleView(paste.id,e)}>
